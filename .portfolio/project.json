@@ -1,0 +1,28 @@
+{
+  "title": "Claude Crab",
+  "tagline": "A pixel crab in VS Code that mirrors what Claude Code is doing",
+  "summary": "A small VS Code extension that draws an animated pixel-art crab in a panel and changes its pose to match whatever the Claude Code assistant is doing right now: reading, writing, running a command, or finishing with a grin or a frown. Claude Code is wired to it by hooks, which post each event as JSON to a tiny local web server inside the extension, and every frame of the crab is drawn square by square in code on a 36 by 36 grid rather than loaded from image files.",
+  "year": "2026",
+  "status": "Parked",
+  "tags": ["vscode-extension", "typescript", "claude-code", "pixel-art", "canvas", "hooks"],
+  "links": [{ "label": "Source", "url": "https://github.com/HiIts-Matt/ClaudeCrab" }],
+  "cover": "media/01-states.webp",
+  "media": [
+    {
+      "src": "media/01-states.webp",
+      "alt": "Four poses of the pixel crab: thinking with a thought bubble, reading a file, facing a computer running a command, and grinning with sparkles and a green tick",
+      "caption": "Four of the ten states, captured from the live panel: thinking, reading, running a command, and success."
+    },
+    {
+      "src": "media/02-error.webp",
+      "alt": "The pixel crab with crossed eyes and a frown after a failed step",
+      "caption": "The error pose, with crossed eyes borrowed from the losing face in Minesweeper."
+    },
+    {
+      "src": "media/03-session.webm",
+      "poster": "media/03-session-poster.webp",
+      "alt": "Nine second clip of the crab bobbing, then thinking, writing, running a command and finishing with a grin",
+      "caption": "The panel running for nine seconds while states are pushed to it, which is how it behaves during a real session."
+    }
+  ]
+}
