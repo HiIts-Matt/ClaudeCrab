@@ -23,8 +23,8 @@ your eye without stopping what you are doing.
 | Changed its mind | Raised claw and an exclamation mark |
 | Compacted the context | Jumps on a cardboard box until it is flat |
 
-Four of those are temporary and revert on a timer — the error face holds for
-240 frames, success for 180 — because a grin that stays forever stops meaning
+Four of those are temporary and revert on a timer: the error face holds for
+240 frames, success for 180, because a grin that stays forever stops meaning
 anything.
 
 The crossed eyes are lifted from the losing face in Minesweeper. The box
@@ -52,23 +52,23 @@ strips every hook whose command mentions `localhost:57438`. Re-running it can
 therefore never leave you with two crabs listening to the same session.
 
 Only the `Stop` event needs interpretation, because "the assistant has finished"
-does not say whether it went well. So the last message gets skimmed for words —
-*done*, *failed*, *not sure*, *hold on* — and the order those patterns are
+does not say whether it went well. So the last message gets skimmed for words like
+*done*, *failed*, *not sure*, *hold on*, and the order those patterns are
 tried in is load-bearing: a message containing both "actually" and "error" is a
 change of mind, not a failure.
 
 ## Nothing here is an image file
 
 There are no sprites and no PNGs in the running extension. Every frame is a
-`Uint8Array` of 1296 palette indices — a 36 by 36 grid — assembled by calling
+`Uint8Array` of 1296 palette indices (a 36 by 36 grid) assembled by calling
 drawing functions: a body, a left arm, a raised right arm, legs, one of eight
 eye styles, one of six mouths, and whichever prop the pose needs. An animation
 is a list of those grids with a duration each, so the bobbing idle, the typing
 terminal and the building thought bubble all run through one mechanism.
 
 Three of the palette's twenty-three slots are not fixed colours. They are read
-out of the active VS Code theme at load — the paper the crab reads from, the
-code lines on it, the crab's own eyes — so the pose sits in whatever editor you
+out of the active VS Code theme at load (the paper the crab reads from, the
+code lines on it, the crab's own eyes), so the pose sits in whatever editor you
 are already using rather than next to it.
 
 Durations are counted in animation frames rather than milliseconds, which
@@ -80,7 +80,7 @@ the frame index changes, so the error pose, which is a single frame held for
 
 ## Thirty-six pixels is the constraint, not the limitation
 
-At 36 pixels across there is no room for detail, which is the point — every
+At 36 pixels across there is no room for detail, which is the point: every
 pose has to survive being squinted at, because squinting at it is the only way
 it will ever be looked at. That rules out expressions and leaves silhouettes:
 head down, arm up, facing away.
@@ -88,8 +88,8 @@ head down, arm up, facing away.
 Getting there needed tooling. A developer mode overlays the canvas with a 36 by
 36 grid and prints the pixel coordinate under the cursor, so a misplaced claw is
 a number to fix rather than a hunt. The extension icon is generated from the
-first idle frame by a script that writes the PNG by hand — CRC table, `IHDR`,
-`IDAT`, `IEND`, one filter byte per row — rather than adding an image library
+first idle frame by a script that writes the PNG by hand (CRC table, `IHDR`,
+`IDAT`, `IEND`, one filter byte per row) rather than adding an image library
 to a project whose whole premise is not having one.
 
 ## Parked at 0.4.0
@@ -99,7 +99,7 @@ it was never published to the Marketplace and the last `.vsix` on disk is two
 versions behind the code. Nothing has been touched since May.
 
 The README has drifted from what is actually there. It documents nine states
-and there are ten — the box-jumping compaction animation arrived without a
+and there are ten: the box-jumping compaction animation arrived without a
 mention. It tells you to run a "Set up hooks" command that is no longer in the
 command palette, because the extension now offers to write the hooks itself. It
 also says the crab appears automatically, which it does not: the extension
