@@ -5,7 +5,6 @@
   "year": "2026",
   "status": "Parked",
   "tags": ["vscode-extension", "typescript", "claude-code", "pixel-art", "canvas", "hooks"],
-  "links": [{ "label": "Source", "url": "https://github.com/HiIts-Matt/ClaudeCrab" }],
   "cover": "media/01-states.webp",
   "media": [
     {
